@@ -3,13 +3,13 @@ const axios = require("axios");
 const path = require("path");
 const { getPrefix } = global.utils;
 const { commands, aliases } = global.GoatBot;
-const doNotDelete = "[ 🐐 | 𝐆𝐎𝐀𝐓-𝐁𝐎𝐓-𝐕𝟐  | 🐐 ]";
+const doNotDelete = "[ 🌼 Laureine ❤️ ]";
  
 module.exports = {
   config: {
     name: "help",
     version: "1.17",
-    author: "NTKhang", // orginal author Ksitfj modified by kshitiz and gerald
+    author: "NTKhang", // 
     countDown: 0,
     role: 0,
     shortDescription: {
