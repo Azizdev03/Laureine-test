@@ -7,13 +7,13 @@ async function handleCommand(api, event, args, message) {
         const question = args.join(" ").trim();
 
         if (!question) {
-            return message.reply("Please provide a question to get an answer.");
+            return message.reply("Coucou, moi c’est Laureine, pour te servir 😊.");
         }
 
         const { response, messageID } = await getAIResponse(question, event.senderID, event.messageID);
         lastResponseMessageID = messageID;
 
-        api.sendMessage(`➣𝙶𝚎𝚛𝚊𝚕𝚍\n━━━━━━━━━━━━━━━━\n ➭ ❝ ${response} ❞\n━━━━━━━━━━━━━━━━`, event.threadID, messageID);
+        api.sendMessage(`Laureine\n━━━━━━━━━━━━━━━━\n ➭ ❝ ${response} ❞\n━━━━━━━━━━━━━━━━`, event.threadID, messageID);
     } catch (error) {
         console.error("Error in handleCommand:", error.message);
         message.reply("An error occurred while processing your request.");
@@ -77,7 +77,7 @@ module.exports = {
         const input = args.join(' ').trim();
         try {
             const { response } = await getAIResponse(input, event.senderID, event.messageID);
-            api.sendMessage(`➣𝙶𝚎𝚛𝚊𝚕𝚍\n━━━━━━━━━━━━━━━━\n ➭ ❝ ${response} ❞\n━━━━━━━━━━━━━━━━\n YOUR QUESTION: ${input}\n━━━━━━━━━━━━━━━━\n[CATEGORY]: GPT4`, event.threadID, messageID);
+            api.sendMessage(`Laureine ❤️\n━━━━━━━━━━━━━━━━\n ➭ ❝ ${response} ❞\n━━━━━━━━━━━━━━━━\n YOUR QUESTION: ${input}\n━━━━━━━━━━━━━━━━\n[CATEGORY]: GPT4`, event.threadID, messageID);
         } catch (error) {
             console.error("Error in onStart:", error.message);
             api.sendMessage("An error occurred while processing your request.", event.threadID);
@@ -92,7 +92,7 @@ module.exports = {
             try {
                 const { response, messageID } = await getAIResponse(input, event.senderID, event.messageID);
                 lastResponseMessageID = messageID;
-                api.sendMessage(`➣𝙶𝚎𝚛𝚊𝚕𝚍\n━━━━━━━━━━━━━━━━\n ➭ ❝ ${response} ❞\n━━━━━━━━━━━━━━━━\n YOUR QUESTION: ${input}\n━━━━━━━━━━━━━━━━\n[CATEGORY]: GPT4`, event.threadID, messageID);
+                api.sendMessage(`Laureine ❤️\n━━━━━━━━━━━━━━━━\n ➭ ❝ ${response} ❞\n━━━━━━━━━━━━━━━━\n YOUR QUESTION: ${input}\n━━━━━━━━━━━━━━━━\n[CATEGORY]: GPT4`, event.threadID, messageID);
             } catch (error) {
                 console.error("Error in onChat:", error.message);
                 api.sendMessage("An error occurred while processing your request.", event.threadID);
